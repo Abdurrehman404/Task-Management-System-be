@@ -25,18 +25,5 @@ public class TaskManagementApplication {
 	public static void main(String[] args) throws MessagingException, IOException {
 		SpringApplication.run(TaskManagementApplication.class, args);
 	}
-//	@Bean
-//	public WebMvcConfigurer corsConfigurer() {
-//		return new WebMvcConfigurerAdapter() {
-//			@Override
-//			public void addCorsMappings(CorsRegistry registry) {
-//				registry.addMapping("/**").allowedOrigins("http://localhost:3000");
-//				registry.addMapping("/**").allowedMethods("POST, GET,OPTIONS, DELETE");
-//				registry.addMapping("/**").allowCredentials(true);
-//				registry.addMapping("/**").allowedHeaders("Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
-//
-//			}
-//		};
-//	}
 }
 
