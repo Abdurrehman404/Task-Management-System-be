@@ -33,7 +33,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
             String[] chunks = token.split(" ", 2);
             System.out.println("Token: " + chunks[1]);
 
-            return (!chunks[1].isBlank() && jwtTokenUtil.isValidToken(chunks[1]));
+            return (!chunks[1].isEmpty() && jwtTokenUtil.isValidToken(chunks[1]));
         }else{
             response.sendError(200,"Forbidden Access");
             return false;
