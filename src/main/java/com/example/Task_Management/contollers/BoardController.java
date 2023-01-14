@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin( origins = {"http://localhost:3000"})// (origins = "http://localhost:3000", methods = {RequestMethod.GET} ,allowedHeaders = "*")
+@CrossOrigin( origins = {"https://serene-sunburst-fefdc0.netlify.app"})// (origins = "http://localhost:3000", methods = {RequestMethod.GET} ,allowedHeaders = "*")
 @RestController
 public class BoardController {
     @Autowired

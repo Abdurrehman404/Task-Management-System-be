@@ -22,7 +22,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-@CrossOrigin( origins = {"http://localhost:3000"}) //  originPatterns = "http://*", allowCredentials = "false",// (origins = "http://localhost:3000", methods = {RequestMethod.GET} ,allowedHeaders = "*")
+@CrossOrigin( origins = {"https://serene-sunburst-fefdc0.netlify.app"}) //  originPatterns = "http://*", allowCredentials = "false",// (origins = "http://localhost:3000", methods = {RequestMethod.GET} ,allowedHeaders = "*")
 @RestController
 public class UserController {
     @Autowired
