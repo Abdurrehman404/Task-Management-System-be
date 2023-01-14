@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@CrossOrigin(origins = "https://serene-sunburst-fefdc0.netlify.app")
+@CrossOrigin(origins = "https://serene-sunburst-fefdc0.netlify.app/")
 @RestController
 public class BoardListController {
     @Autowired
