@@ -36,6 +36,6 @@ public class BoardController {
             // provided userName and then it returns that newly created instance.
             // when new instance is created, To Do list is also created.
         }
-        return new ResponseEntity(board, HttpStatus.OK); // If yes then returned
+        return new ResponseEntity<UnifiedRes>(new UnifiedRes("",200,board), HttpStatus.OK); // If yes then returned
     }
 }
