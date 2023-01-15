@@ -23,17 +23,17 @@ public class BoardListController {
     @Autowired
     BoardListService boardListService;
     @RequestMapping(value = "/boardLists/{listId}",method = RequestMethod.GET)
-    public ResponseEntity<BoardList> getBoardListById(@PathVariable String listId){ // Gets Board by id, send List id in parameters.
-        return new ResponseEntity<BoardList>(boardListService.getBoardList(listId),HttpStatus.OK );
+    public ResponseEntity<UnifiedRes> getBoardListById(@PathVariable String listId){ // Gets Board by id, send List id in parameters.
+        return new ResponseEntity<UnifiedRes>(new UnifiedRes("",200,boardListService.getBoardList(listId)),HttpStatus.OK );
     }
     @RequestMapping(value = "/boardLists/create",method = RequestMethod.POST)
-    public ResponseEntity<BoardList> create(@RequestBody BoardList list){ // Gets Board by id, send List id in parameters.
-        return new ResponseEntity<BoardList>(boardListService.createBoardList(list),HttpStatus.OK );
+    public ResponseEntity<UnifiedRes> create(@RequestBody BoardList list){ // Gets Board by id, send List id in parameters.
+        return new ResponseEntity<UnifiedRes>(new UnifiedRes("",200,boardListService.createBoardList(list)),HttpStatus.OK );
     }
     @RequestMapping(value = "/boardLists/update",method = RequestMethod.POST)
-    public ResponseEntity<BoardList> updatePosition(@RequestBody BoardList list){ // List id and new position is mandatory.
+    public ResponseEntity<UnifiedRes> updatePosition(@RequestBody BoardList list){ // List id and new position is mandatory.
         // it will only update provided list position if it exists,
-        return new ResponseEntity<BoardList>(boardListService.update(list),HttpStatus.OK );
+        return new ResponseEntity<UnifiedRes>(new UnifiedRes("",200,boardListService.update(list)),HttpStatus.OK );
     }
     @RequestMapping(value = "/boardLists/delete",method = RequestMethod.POST)
     public ResponseEntity<UnifiedRes> delete(@RequestBody BoardList list){ // Deletes the list by id.
