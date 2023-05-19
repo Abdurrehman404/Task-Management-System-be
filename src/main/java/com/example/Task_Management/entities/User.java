@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.FieldType;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document("User")
-public class User {
+public class User{
     @Id
     @Field(name = "_id",targetType = FieldType.OBJECT_ID)
     private String id;

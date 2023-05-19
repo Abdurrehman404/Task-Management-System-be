@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin( origins = {"https://serene-sunburst-fefdc0.netlify.app/"})// (origins = "http://localhost:3000", methods = {RequestMethod.GET} ,allowedHeaders = "*")
+@CrossOrigin( origins = {"http://localhost:3000"})// (origins = "http://localhost:3000", methods = {RequestMethod.GET} ,allowedHeaders = "*")
 @RestController
 public class BoardController {
     @Autowired
@@ -22,7 +22,7 @@ public class BoardController {
     public ResponseEntity<UnifiedRes> updateBoard(@RequestBody Board board) {
         return new ResponseEntity<UnifiedRes>(new UnifiedRes("Updated",200,boardService.updateBoard(board)), HttpStatus.OK); // To update Board, MUST Provide Board id in JSON format.
         // Only BoardName and assignedTo can be updated through this API call.
-    }
+    }   
     @RequestMapping(value = "/board/{userName}", method = RequestMethod.GET)
     public ResponseEntity<UnifiedRes> getBoard(@PathVariable String userName) {
 

@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@CrossOrigin( origins = {"https://serene-sunburst-fefdc0.netlify.app/"})
+@CrossOrigin( origins = {"http://localhost:3000"})
 @RestController
 public class CardController {
     @Autowired
